@@ -1,0 +1,22 @@
+.app-sidebar {
+    margin-top: 45px;
+    background-color: white !important;
+}
+
+.app-sidebar .ant-menu-item-selected {
+    background-color: white !important;
+}
+
+.app-sidebar .ant-menu-item {
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+
+.app-sidebar .ant-menu-item img{
+    height: 18px !important;
+    width: 18px !important;
+}
+
+.app-sidebar.ant-menu-inline {
+    border-right: none !important;
+}

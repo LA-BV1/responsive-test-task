@@ -1,0 +1,8 @@
+.app-main-content  {
+    background-color: #fafbfc;
+    padding: 20px 35px;
+}
+
+.ant-layout.ant-layout-has-sider .ant-layout-content {
+    background-color: #fafbfc;
+}

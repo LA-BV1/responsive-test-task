@@ -1,0 +1,203 @@
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Lato';
+    margin-bottom: 35px;
+}
+
+.dashboard-progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    white-space: nowrap;
+    flex-wrap: wrap;
+}
+
+.dashboard-progress .ant-progress {
+    margin-right: 5px;
+    width: 200px;
+    max-width: 200px;
+    min-width: 200px;
+}
+
+.dashboard-progress .dashboard-progress-descr {
+    color: lightgray !important;
+    margin-left: 3px;
+}
+
+.dashboard-content {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-charts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.dashboard-charts > .ant-row {
+    width: 100%;
+    position: relative;
+}
+
+.dashboard-charts .ant-col {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px 32px !important;
+    text-align: left;
+    font-weight: bold;
+    font-size: 12px;
+    position: relative;
+    /* height: 100%; */
+}
+
+.chart-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.chart-block > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: lightgray;
+    font-weight: normal;
+}
+
+.chart-block > div > span {
+    margin-top: 28px;
+}
+
+.chart-block > div span > span {
+    font-size: 18px;
+    color: black;
+    margin-right: 9px;
+}
+
+.general-chart-block {
+    max-width: 100%;
+}
+
+.general-chart-block img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.round-chart-block {
+    align-self: flex-start !important;
+}
+
+.round-chart-block img {
+    object-fit: cover;
+    height: 110px;
+}
+
+.dashboard-charts .ant-col:last-child {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .dashboard-charts .ant-col:last-child {
+        height: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .dashboard-charts .ant-col:last-child {
+        border-right: none;
+    }
+}
+
+.term-block {
+    width: 100%;
+    height: 100% !important;
+    max-height: 110px;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.term-block div {
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+    font-weight: normal;
+}
+
+.term-block div span {
+    color: black;
+    font-weight: bold;
+}
+
+.dashboard-table-header {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.dashboard-table-header .ant-btn {
+    padding: 0 !important;
+}
+
+
+.dashboard-table-container > .ant-table-wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.dashboard-table-container .ant-table-thead th{
+    text-transform: uppercase;
+    color: lightgray !important;
+    letter-spacing: 2px;
+    font-size: 12px;
+    border-bottom: none;
+}
+
+.dashboard-table-container .ant-table-tbody > tr > td {
+    border-bottom: none;
+    color: grey;
+}
+
+.dashboard-table-container .ant-table-tbody .table-user {
+    color: black;
+}
+
+.pagination-range-info {
+    text-align: left;
+    padding-left: 32px;
+    color: gray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pagination-range-info span {
+    color: black;
+}
+
+.ant-table-tbody .ant-table-row td:first-child {
+    padding-left: 0 !important;
+}
+
+.ant-table-tbody .ant-table-row td:last-child {
+    padding-right: 0 !important;
+    width: max-content !important;
+    text-align: center;
+}

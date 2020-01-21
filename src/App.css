@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  font-family: 'Lato';
+}
+
+.App > .ant-layout {
+  min-height: 100vh;
+}
+
+.app-grid > .ant-row > .ant-col-1 {
+  border-top: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
