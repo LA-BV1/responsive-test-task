@@ -8,19 +8,22 @@ export const DashboardTable = (props) => {
     const { supportRequests } = props.data
 
     useEffect(() => {
-        setRows(supportRequests)
+        setRows(supportRequests.map(el => { el.id = Math.floor(Math.random() * Date.now()); return el }))
         handlePaginationRange(1, 6)
     }, [])
 
 
     const addRows = () => {
         let randomItem = additionalData.supportRequests[Math.floor(Math.random() * additionalData.supportRequests.length)]
+        // randomItem['id'] = Math.floor(Math.random() * Date.now())
+        randomItem = { ...randomItem, id: Math.floor(Math.random() * Date.now()) }
         setRows([...rows, randomItem])
     }
 
-    const changeRows = (id) => {
+    const changeRows = (record) => {
         let newArray = rows
-        newArray[id].status = 'sent'
+        let index = newArray.findIndex(el => el.id === record.id)
+        newArray[index].status = 'sent'
         setRows([...newArray])
     }
 
@@ -60,7 +63,7 @@ export const DashboardTable = (props) => {
             title: 'status',
             dataIndex: 'status',
             key: 'status',
-            render: (text, record, index) => text === 'sent' ? <Button type='primary'>Sent</Button> : <Button onClick={() => changeRows(index)}>Send</Button>,
+            render: (text, record, index) => text === 'sent' ? <Button type='primary'>Sent</Button> : <Button onClick={() => changeRows(record)}>Send</Button>,
         },
     ]
 
