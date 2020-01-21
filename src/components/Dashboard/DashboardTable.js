@@ -15,7 +15,6 @@ export const DashboardTable = (props) => {
 
     const addRows = () => {
         let randomItem = additionalData.supportRequests[Math.floor(Math.random() * additionalData.supportRequests.length)]
-        // randomItem['id'] = Math.floor(Math.random() * Date.now())
         randomItem = { ...randomItem, id: Math.floor(Math.random() * Date.now()) }
         setRows([...rows, randomItem])
     }
